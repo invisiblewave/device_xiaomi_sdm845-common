@@ -16,7 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.multicam.hwsync=TRUE \
     persist.vendor.camera.multicam.framesync=1 \
     persist.vendor.camera.perfcapture=1 \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.miui.cit,com.qualcomm.qti.qmmi
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.GoogleCameraTele
 
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
