@@ -36,7 +36,8 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.qcom.rc
+    init.qcom.rc \
+    init.qcom.early_boot.sh
 
 # Display
 PRODUCT_PACKAGES += \
