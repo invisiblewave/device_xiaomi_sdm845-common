@@ -52,7 +52,7 @@ static T get(const std::string& path, const T& def) {
 
 static constexpr int kDefaultMaxBrightness = 255;
 static constexpr int kRampSteps = 50;
-static constexpr int kRampMaxStepDurationMs = 5;
+static constexpr int kRampMaxStepDurationMs = 150;
 
 static uint32_t getBrightness(const LightState& state) {
     uint32_t alpha, red, green, blue;
@@ -136,6 +136,7 @@ void Light::handleNotification(const LightState& state, size_t index) {
         if (kRampMaxStepDurationMs * kRampSteps > onMs) {
             stepDuration = onMs / kRampSteps;
             pauseHi = 0;
+            pauseLo = offMs;
         } else {
             stepDuration = kRampMaxStepDurationMs;
             pauseHi = onMs - kRampSteps * stepDuration;
